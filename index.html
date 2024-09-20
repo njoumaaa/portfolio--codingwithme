@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <div>
+                    <div>
+                        <span>Portfolio</span>
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                <a href="#cv">CV</a>
+                                <a href="#portfolio">Portfolio</a>
+                                <a href="#skills">Skills</a>
+                                <a href="#contact">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="cv">
+            <h2>Curriculum Vitae</h2>
+            <div class="cv-content">
+                <h3>jlassi najem</h3>
+                <p>Email: <a href="jlassinajm20@gmail.com">jlassinajm20@gmail.com</a></p>
+                <p>Phone: +216 95551938</p>
+                <h4>Experience</h4>
+                <ul>
+                    <li>Web Developer at YFZ Company (2024 - Present)</li>
+                    <li>Frontend Developer at YFZ Inc. (2024 - 2025)</li>
+                </ul>
+                <h4>Education</h4>
+                <ul>
+                    <li>Bachelor's in Computer Science, University of kef (2024 - 2027)</li>
+                </ul>
+            </div>
+        </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-content">
+                <div class="project">
+                    <h3>Project 1</h3>
+                    <p>Description of project 1.</p>
+                    <button class="view-project">View Project</button>
+                </div>
+                <div class="project">
+                    <h3>Project 2</h3>
+                    <p>Description of project 2.</p>
+                    <button class="view-project">View Project</button>
+                </div>
+                <div class="project-modal" id="project-modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2 id="Project-Details">Project Details : </h2>
+                        <p>This is a sample project :</p>
+                        <img src="" alt="Project Image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-content">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>Php</li>
+                    <li>Mysql</li>
+                </ul>
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Communication</li>
+                    <li>Teamwork</li>
+                    <li>Problem-solving</li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Message"></textarea>
+                    <button>Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Jlassi Najem</p>
+        <ul>
+            <li><a href="" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </footer>
+    <script>
+        // Add event listener to view project button
+        const viewProjectButtons = document.querySelectorAll('.view-project');
+        viewProjectButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const projectModal = document.getElementById('project-modal');
+                projectModal.style.display = 'block';
+            });
+        });
+
+        // Add event listener to close button
+        const closeButton = document.querySelector('.close');
+        closeButton.addEventListener('click', () => {
+            const projectModal = document.getElementById('project-modal');
+            projectModal.style.display = 'none';
+        });
+
+        // Add event listener to send message button
+        const sendMessageButton = document.querySelector('button[type="submit"]');
+        sendMessageButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const name = document.querySelector('input[type="text"]').value;
+            const email = document.querySelector('input[type="email"]').value;
+            const message = document.querySelector('textarea').value;
+            console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+a:hover {
+    color: #23527c;
+}
+
+/* Add space between header and main */
+
+header {
+    margin-bottom: 20px; /* Add 20px margin bottom to header */
+}
+
+/* or alternatively, you can add padding top to main */
+
+main {
+    padding-top: 20px; /* Add 20px padding top to main */
+}
+
+:root {
+    --spacing: 20px; /* Define a global spacing variable */
+}
+
+header {
+    margin-bottom: var(--spacing); /* Use the global spacing variable */
+}
+
+main {
+    padding-top: var(--spacing); /* Use the global spacing variable */
+}
+
+/* Navbar Styles */
+
+header nav {
+    background-color: #384B70;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+header nav:hover {
+    background-color: #B8001F;
+}
+
+header nav div div span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FCFAEE;
+    margin-right: 1rem;
+}
+
+header nav div div div a {
+    color: #FCFAEE;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease;
+}
+
+header nav div div div a:hover {
+    background-color: #507687;
+}
+
+header nav div div div a.active {
+    background-color: #FCFAEE;
+}
+
+header nav div div div i {
+    font-size: 1.5rem;
+    color: #FCFAEE;
+    cursor: pointer;
+}
+
+header nav div div div i:hover {
+    color: #aaa;
+}
+/* Main Content Styles */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    margin-top: 50px;
+}
+
+section {
+    background-color: #384B70;
+    padding: 2em;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #FCFAEE;
+}
+#cv{
+    margin-top: 20px;
+}
+
+.cv-content, .portfolio-content, .skills-content, .contact-content {
+    padding: 2em;
+    background-color: #FCFAEE;
+    border: 1px solid #384B70;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.project {
+    margin-bottom: 20px;
+    background-color: #384B70;
+    padding: 1em;
+    border: 1px solid #507687;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #FCFAEE;
+}
+
+.view-project {
+    background-color: #B8001F;
+    color: #FCFAEE;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.view-project:hover {
+    background-color: #507687;
+}
+
+.project-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #384B70;
+}
+
+.modal-content {
+    background-color: #FCFAEE;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+.close {
+    color: #384B70;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+#Project-Details{
+    color: #384B70;
+}
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #384B70;
+    padding: 1em;
+    text-align: center;
+    clear: both;
+    color: #f9f9f9;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer li {
+    margin-right: 20px;
+}
+
+footer a {
+    color: #FCFAEE;
+    text-decoration: none;
+}
